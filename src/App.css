@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  width: 100%;
+  margin-left: 50px;
+}
+.header{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.headerInfo{
+  display:flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  display: flex;
+  margin: 0 auto;
+  width: 60%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.card-content img {
+  width: 150px; 
+  height: 150px;
+  border-radius: 5px;
+  margin-top: -175px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.search{
+  display: flex;
+  margin: 50px;
+}
+.info-top {
+  flex: 1; /* Этот стиль растягивает info-top по высоте */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tags {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 5px;
 }
+
+.info-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.button {
+  display: inline-block;
+  width: 150px; /* Фиксированная ширина кнопки */
+  height: 40px; /* Фиксированная высота кнопки */
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button:hover {
+  background-color: #0056b3; /* Новый цвет фона при наведении */
+}
+span{
+  font-size: 12px;
+  opacity: 0.5px;
+  text-transform: uppercase;
+}
+b{
+  font-size: 15px;
+}
+
+.card-input {
+  width: 100%; /* Сделать ширину инпута 100% от родительского контейнера */
+  padding: 15px; 
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 15px;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  margin-right: 10px; /* Регулируйте отступ значка от инпута по вашему желанию */
+}
+
+.footer {
+  background-color: #007bff; /* Темно-синий цвет фона */
+  color: #fff; /* Белый текст */
+  padding: 10px; /* Добавим немного внутренних отступов для текста внутри футтера */
+  margin-top: 20px;
+}
+
+.footer-text {
+  text-align: center; /* Центрируем текст внутри футтера */
+}
+
+.blue-square {
+  background-color: #e7f6ff; /* Голубой цвет */
+  width: 200px; /* Измените размер квадрата по вашему усмотрению */
+  height: 200px; /* Измените размер квадрата по вашему усмотрению */
+  margin-top: 0px; /* Отступ сверху от фотографии */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
