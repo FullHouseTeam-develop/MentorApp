@@ -1,0 +1,22 @@
+.search {
+    display: flex;
+    margin: 50px;
+    align-items: center;
+    width: 63%;
+    
+    &_icon {
+        margin-right: 10px; 
+        width: 20px;
+        height: 20px;
+      }
+      .card_input {
+        width: 100%; 
+        padding: 15px; 
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        font-size: 15px;
+      }
+  }
+  
+  

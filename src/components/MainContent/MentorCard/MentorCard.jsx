@@ -1,30 +1,32 @@
 import React from 'react';
+import classes from './MentorCard.module.scss';
 
-const MentorCard = () => {
+
+const MentorCard = (props) => {
   return (
-    <div className='card'>
-                <div className='card-content'>
-                <div className="blue-square"></div>
-                    <img src="https://i.pinimg.com/originals/aa/34/bb/aa34bb46682476838eebfb5589350194.jpg" />
-                    
+    <div className={classes.card}>
+                <div className={classes.card_content}>
+                <div className={classes.blue_square}></div>
+                    <img src={props.imageUrl} alt ="Photo" /> 
                 </div>
-                <div className='card-info'>
-                    <div className='info-top'>
-                        <div>Имя Фамилия</div>
-                        <div>Описание</div>
-                        <ul className='tags'>
+                <div className={classes.card_info}>
+                    <div className={classes.info_top}>
+                        <div>
+                            <p>{props.name}</p>
+                        </div>
+                         <div>{props.bio}</div>
+                        <ul className={classes.tags}>
                             <li>Тэг1</li>
                             <li>Тэг2</li>
                             <li>Тэг3</li>
                         </ul>
                     </div>
-                    <div className='info-bottom'>
+                    <div className={classes.info_bottom}>
                         <div className='price'>
-                            <span>Цена:</span>
-                            <b>100 руб</b>
+                            <span>Цена: </span>
+                            <b>{props.price}</b>
                         </div>
-                        <button className='button'>написать</button>
-                        <button className='button'>еще</button>
+                        <button className='button'>Подробнее</button>
                     </div>
                 </div>
             </div>

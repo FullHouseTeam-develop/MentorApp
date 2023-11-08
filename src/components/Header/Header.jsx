@@ -1,41 +1,33 @@
 import React from 'react';
-import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
-import { Search } from '@mui/icons-material';
+import classes from './Header.module.scss';
+import message from '../../assets/icons/message.svg'
+import bell from '../../assets/icons/bell.svg'
+import user from '../../assets/icons/user.svg'
+
     function Header() {
         return (
-            <div className='wrapper clear'>
-                <header className='header'>
+                <header className={classes.header}>
                     <div className='logo'>
                         <img src="https://flomaster.top/uploads/posts/2022-07/1657396841_36-flomaster-club-p-visloukhii-kot-risunok-krasivo-41.jpg" width="40" />
                         </div>
-                        <div className='headerInfo'>
+                        <div className={classes.header_info}>
                             <h3 className='text-uppercase'>Mentor App</h3>
-                            <span className='findLink' style={{ marginLeft: '20px' }}>Найти</span>
+                            <span className={classes.header_link} >Найти</span>
                         </div>
 
 
-                    <ul className='d-flex mr-30'>
-                        <li className='mr-30'>
-                            <TextsmsOutlinedIcon />
+                    <ul className='d-flex clear'>
+                    <li className={`${classes.message} ${classes.mr30}`}>  
+                            <img src={message} />
                         </li>
-                        <li className='mr-30'>
-                            < NotificationsNoneIcon />
+                        <li className={`${classes.bell} ${classes.mr30}`}>
+                            <img src={bell} />
                         </li>
-                        <li className='mr-30'>
-                            <PermIdentityOutlinedIcon />
+                        <li className={classes.user}>
+                            <img src={user}/>
                         </li>
                     </ul>
-                </header>
-
-                <div className='search d-flex align-center'>
-                    <div className="search-icon">
-                        <Search />
-                    </div>
-                    <input className="card-input" placeholder="Поиск" />
-                </div>
-        </div>
+                </header>     
     );
 }
 

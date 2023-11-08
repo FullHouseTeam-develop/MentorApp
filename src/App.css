@@ -1,78 +1,16 @@
-.wrapper{
+.app-wrapper{
   display: flex;
   flex-direction: column;
   max-width: 90%;
   width: 100%;
-  margin-left: 50px;
-}
-
-  .header{
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-  }
-
-  .headerInfo{
-    display:flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  
-
-.card {
-  display: flex;
-  margin: 0 auto;
-  width: 60%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-}
-
-.card-content {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 10px;
+  margin: 0 auto;
 }
-
-.card-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-
-.info-top {
-  flex: 1; /* Этот стиль растягивает info-top по высоте */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.tags {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 5px;
-}
-
-.info-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 5px;
-}
-
+ 
 .button {
   display: inline-block;
-  width: 150px; /* Фиксированная ширина кнопки */
-  height: 40px; /* Фиксированная высота кнопки */
+  width: 150px; 
+  height: 40px; /* Фиксированная высота\ширина кнопки */
   text-align: center;
   text-decoration: none;
   background-color: #007bff;
@@ -81,6 +19,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 40px;
 }
 .button:hover {
   background-color: #0056b3; 
@@ -94,44 +33,9 @@ b{
   font-size: 15px;
 }
 
-.card-input {
-  width: 100%; 
-  padding: 15px; 
-  border: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  font-size: 15px;
-}
-.search {
-  display: flex;
-  margin: 50px;
-  align-items: center;
-  width: 90%;
-}
 
-.search-icon {
-  margin-right: 10px; /* Регулируйте отступ значка от инпута по вашему желанию */
-}
 
-.footer {
-  background-color: #007bff; /* Темно-синий цвет фона */
-  color: #fff; /* Белый текст */
-  padding: 10px; /* Добавим немного внутренних отступов для текста внутри футтера */
-  margin-top: 20px;
-}
 
-.footer-text {
-  text-align: center; /* Центрируем текст внутри футтера */
-}
-
-.blue-square {
-  background-color: #e7f6ff; 
-  width: 200px;
-  height: 200px; 
-  margin-top: -10px; 
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 .card-content img {
   width: 150px; 
   height: 150px;

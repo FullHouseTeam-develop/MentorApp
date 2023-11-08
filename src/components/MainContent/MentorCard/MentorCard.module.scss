@@ -1,0 +1,99 @@
+  
+.card {
+    display: flex;
+    width: 60%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+
+    &_info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .blue_square {
+      background-color: #e7f6ff; 
+      width: 200px;
+      height: 200px; 
+      margin-top: -10px; 
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-top {
+      flex: 1; 
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .tags {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 5px;
+    }
+    .info-bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+    }
+  }
+  .button {
+    display: inline-block;
+    width: 150px; /* Фиксированная ширина кнопки */
+    height: 40px; /* Фиксированная высота кнопки */
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    .button:hover {
+      background-color: #0056b3; 
+    }
+  }
+  
+  span{
+    font-size: 12px;
+    opacity: 0.5px;
+    text-transform: uppercase;
+  }
+  b{
+    font-size: 15px;
+  }
+  
+  .card_input {
+    width: 100%; 
+    padding: 15px; 
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 15px;
+  }
+
+  
+.card_content img {
+  width: 150px; 
+  height: 150px;
+  border-radius: 5px;
+  margin-top: -175px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
