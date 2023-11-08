@@ -4,14 +4,26 @@ import Header from './components/Header';
 import MentorCard from './components/MainContent/MentorCard';
 import Footer from './components/Footer';
 
+const arr=[{
+  name:'Бан Чан', bio: 'пишу песни', imageUrl: '/mentorsPhoto/Soonie.jpg'},
+  {name:'Стая Ходарева', bio: 'пишу код', imageUrl:'/mentorsPhoto/taya.jpg'},
+  {name:'Катя Зайцева', bio: 'пишу код', imageUrl: '/mentorsPhoto/kate.jpg'}
+];
+
 
 const App = () =>{
   return(
     <div className='app-wrapper'>
       <div className='app-header'><Header/></div>
-      <div className='app-card'><MentorCard/></div>
-      <div className='app-card'><MentorCard/></div>
-      <div className='app-catd'><Footer/></div>
+      {arr.map((obj) => ( 
+        <MentorCard
+            name={obj.name}
+            bio={obj.bio}
+            imageUrl={obj.imageUrl}
+            />
+      ))}
+      
+      <div className='app-footer'><Footer/></div>
     </div>
   ); 
   
