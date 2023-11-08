@@ -1,0 +1,88 @@
+.ad_card{
+    .return_button{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .mentor_photo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 200px;
+        height: 200px; 
+        padding: 10px;
+    }
+    .blue_square{
+        background-color: #e7f6ff; 
+        width: 200px;
+        height: 200px; 
+        margin-top: -10px; 
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .mentor_photo img{
+        width: 150px; 
+        height: 150px;
+        border-radius: 5px;
+        margin-top: -175px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .send_message_button{
+        display: inline-block;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+    }
+    .ad_content{
+        background-color: #e7f6ff;
+        .mentor_fullname{
+            color: #000;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 36px;
+            font-style: normal;
+        }
+        .tags{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 5px;
+        }
+        .about_me, .how_can_i_help{
+            color: #000;
+            text-align: center;
+            font-family: Montserrat;
+            font-size: 30px;
+            font-style: normal;
+        }
+    }
+    .review_button{
+        display: inline-block;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+    }
+}
