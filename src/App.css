@@ -10,7 +10,7 @@
 .button {
   display: inline-block;
   width: 150px; 
-  height: 40px; /* Фиксированная высота\ширина кнопки */
+  height: 40px; 
   text-align: center;
   text-decoration: none;
   background-color: #007bff;
