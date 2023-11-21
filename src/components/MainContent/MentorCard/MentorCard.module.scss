@@ -1,108 +1,143 @@
-  
 .card {
-    display: flex;
-    width: 60%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: white;
+
+  display: flex;
+  width: 100%;
+  padding: 32px 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #3B96DA;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  box-sizing: border-box;
+
+  &_image {
+    max-width: 300px;
+    height: 300px;
+    width: 100%;
+    padding: 25px;
+    margin-right: 60px;
+    box-sizing: border-box;
+    background-color: #70ABD6;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
+  }
 
-    &_content {
+  &_image img {
+    max-width: 250px;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &_name {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
+      color: #FFF;
       text-align: center;
-      padding: 10px;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
     }
 
-    &_info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 10px;
-    }
+    &_main {
 
-    .blue_square {
-      background-color: #e7f6ff; 
-      width: 200px;
-      height: 200px; 
-      margin-top: -10px; 
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
 
-    .info-top {
-      flex: 1; 
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .tags {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 5px;
+      ul {
+        display: flex;
+        padding: 0;
+        margin-left: 0;
+        gap: 10px;
+        color: #FFF;
+        text-align: center;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
 
       li {
-        background-color: #007bff;;
-        border-radius: 10px; 
-        padding: 5px 10px; 
+        display: inline;
+        list-style: none;
+        background-color: #70ABD6;
+        border-radius: 10px;
+        padding: 5px 10px;
         width: auto;
         text-align: center;
         color: #fff;
       }
+
+      .description {
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
     }
-    .info-bottom {
+
+    .card_info_bottom {
+      height: 100%;
       display: flex;
-      flex-direction: column;
       align-items: flex-end;
-      gap: 5px;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      .card_info_price {
+        display: flex;
+        width: 200px;
+        height: 50px;
+        background-color: #70ABD6;
+        border-radius: 10px;
+        align-items: center;
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        justify-content: center;
+      }
+
+      .card_info_price_btn {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+        border: none;
+        font-family: inherit;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 10px;
+        background: #DD5FAA;
+        box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
+
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+
+
+    span {
+      font-size: 12px;
+      opacity: 0.5px;
+      text-transform: uppercase;
+    }
+
+    b {
+      font-size: 15px;
     }
   }
-  .button {
-    display: inline-block;
-    width: 150px; /* Фиксированная ширина кнопки */
-    height: 40px; /* Фиксированная высота кнопки */
-    text-align: center;
-    text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    .button:hover {
-      background-color: #0056b3; 
-    }
-  }
-  
-  span{
-    font-size: 12px;
-    opacity: 0.5px;
-    text-transform: uppercase;
-  }
-  b{
-    font-size: 15px;
-  }
-  
-  .card_input {
-    width: 100%; 
-    padding: 15px; 
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    font-size: 15px;
-  }
-
-  
-.card_content img {
-  width: 150px; 
-  height: 150px;
-  border-radius: 5px;
-  margin-top: -175px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

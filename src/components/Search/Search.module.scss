@@ -1,8 +1,9 @@
 .search {
     display: flex;
-    margin: 50px;
+    width: 100%;
     align-items: center;
-    width: 63%;
+    margin-bottom: 50px;
+    margin-top: 50px;
     
     &_icon {
         margin-right: 10px; 

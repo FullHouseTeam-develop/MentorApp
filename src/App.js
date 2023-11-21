@@ -5,19 +5,28 @@ import MentorCard from './components/MainContent/MentorCard';
 import Footer from './components/Footer';
 import Search from './components/Search';
 
-const arr=[{
-  name:'Бан Чан', bio: 'пишу песни', imageUrl: require('./assets/mentorsPhoto/Soonie.jpg'), price:'100руб'},
-  {name:'Стая Ходарева', bio: 'пишу код', imageUrl:require('./assets/mentorsPhoto/taya.jpg'),price:'200руб'},
-  {name:'Катя Зайцева', bio: 'пишу код', imageUrl: require('./assets/mentorsPhoto/kate.jpg'), price:'300руб'}
-];
+
 
 
 const App = () =>{
+const [mentors, setMentors] = React.useState([]); 
+
+React.useEffect(() =>{
+  fetch('https://655453fd63cafc694fe65629.mockapi.io/mentors')
+    .then((res)=>{
+    return res.json();
+  })
+    .then((json)=>{
+    setMentors(json);
+  });
+},[]);
+
   return(
     <div className='app-wrapper'>
       <Header/>
+      <div className='main_container'>
       <Search/>
-      {arr.map((obj) => ( 
+      {mentors.map((obj) => ( 
         <MentorCard
             name={obj.name}
             bio={obj.bio}
@@ -25,6 +34,7 @@ const App = () =>{
             price={obj.price}
             />
       ))}
+      </div>
       <Footer/>
     </div>
   ); 
