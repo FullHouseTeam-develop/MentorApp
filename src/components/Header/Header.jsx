@@ -14,7 +14,7 @@ function Header() {
             </div>
             <div className={classes.header_icons}>
             <ul className={classes.header_icons_list}>
-                <li className={`${classes.message} ${classes.mr30}`}>
+                <li className={classes.message}>
                     <img src={message} alt="mes" />
                 </li>
                 {/* <li className={`${classes.bell} ${classes.mr30}`}>
