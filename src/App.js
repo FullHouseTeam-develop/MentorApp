@@ -1,12 +1,14 @@
 import './App.css';
 import React , {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+
+//components
 import Header from './components/Header';
-import MentorCard from './components/MainContent/MentorCard';
 import Footer from './components/Footer';
-import Search from './components/Search';
 
-
-
+//pages
+import PageAd from './pages/PageAd';
+import PageSearch from './pages/PageSearch';
 
 const App = () =>{
 const [mentors, setMentors] = React.useState([]); 
@@ -24,22 +26,15 @@ React.useEffect(() =>{
   return(
     <div className='app-wrapper'>
       <Header/>
-      <div className='main_container'>
-      <Search/>
-      {mentors.map((obj) => ( 
-        <MentorCard
-            name={obj.name}
-            bio={obj.bio}
-            imageUrl={obj.imageUrl}
-            price={obj.price}
-            />
-      ))}
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/PageSearch" element={<PageSearch/>}/>
+          <Route path="/PageAd" element={<PageAd />}/>
+        </Routes>
+      </BrowserRouter>
       <Footer/>
     </div>
   ); 
-  
 }
-
 
 export default App;
