@@ -11,18 +11,6 @@ import PageAd from './pages/PageAd';
 import PageSearch from './pages/PageSearch';
 
 const App = () =>{
-const [mentors, setMentors] = React.useState([]); 
-
-React.useEffect(() =>{
-  fetch('https://655453fd63cafc694fe65629.mockapi.io/mentors')
-    .then((res)=>{
-    return res.json();
-  })
-    .then((json)=>{
-    setMentors(json);
-  });
-},[]);
-
   return(
     <div className='app-wrapper'>
       <Header/>
@@ -35,6 +23,5 @@ React.useEffect(() =>{
       <Footer/>
     </div>
   ); 
-}
-
+  }
 export default App;

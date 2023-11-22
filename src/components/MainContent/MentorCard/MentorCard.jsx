@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './MentorCard.module.scss';
-
+import { Link } from 'react-router-dom';
 
 const MentorCard = (props) => {
     return (
@@ -16,15 +16,14 @@ const MentorCard = (props) => {
 
                 <div className={classes.card_info_main}>
                     <ul>
-                        <li>ОмГУ</li>
-                        <li>Алкоголизм</li>
-                        <li>Депрессия</li>
+                        <li>Дизайн</li>
+                        <li>Копирайтинг</li>
                     </ul>
                     <div className={classes.description}>{props.bio}</div>
                 </div>
                 <div className={classes.card_info_bottom}>
                     <div className={classes.card_info_price}>{props.price}</div>
-                    <button className={classes.card_info_price_btn}>Подробнее</button>
+                    <Link to="/PageAd"><button className={classes.card_info_price_btn}>Подробнее</button></Link>
                 </div>
             </div>
         </div>
