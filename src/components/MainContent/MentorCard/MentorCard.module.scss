@@ -1,13 +1,14 @@
   
 .card {
     display: flex;
-    width: 60%;
+    width: 60vw;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
+    margin: auto;
 
     &_content {
       display: flex;

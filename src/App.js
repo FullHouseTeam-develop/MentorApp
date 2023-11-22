@@ -1,35 +1,28 @@
 import './App.css';
 import React , {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+
+//components
 import Header from './components/Header';
-import MentorCard from './components/MainContent/MentorCard';
 import Footer from './components/Footer';
-import Search from './components/Search';
 
-const arr=[{
-  name:'Бан Чан', bio: 'пишу песни', imageUrl: require('./assets/mentorsPhoto/Soonie.jpg'), price:'100руб'},
-  {name:'Стая Ходарева', bio: 'пишу код', imageUrl:require('./assets/mentorsPhoto/taya.jpg'),price:'200руб'},
-  {name:'Катя Зайцева', bio: 'пишу код', imageUrl: require('./assets/mentorsPhoto/kate.jpg'), price:'300руб'}
-];
-
+//pages
+import PageAd from './pages/PageAd';
+import PageSearch from './pages/PageSearch';
 
 const App = () =>{
   return(
     <div className='app-wrapper'>
       <Header/>
-      <Search/>
-      {arr.map((obj) => ( 
-        <MentorCard
-            name={obj.name}
-            bio={obj.bio}
-            imageUrl={obj.imageUrl}
-            price={obj.price}
-            />
-      ))}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/PageSearch" element={<PageSearch/>}/>
+          <Route path="/PageAd" element={<PageAd />}/>
+        </Routes>
+      </BrowserRouter>
       <Footer/>
     </div>
   ); 
-  
 }
-
 
 export default App;
