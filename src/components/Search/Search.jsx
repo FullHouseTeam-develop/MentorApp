@@ -6,7 +6,7 @@ import lupa from '../../assets/icons/lupa.svg'
 function Search(){
     const [searchValue, setSearchValue] = React.useState('');
     const onChangeSearchInput=(event) =>{
-        console.log(event.target.value);
+        setSearchValue(event.target.value);
       }
     return(
         <div className={classes.search} >
