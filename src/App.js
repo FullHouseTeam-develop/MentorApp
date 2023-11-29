@@ -1,27 +1,26 @@
 import './App.css';
-import React , {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
-
-//components
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-//pages
 import PageAd from './pages/PageAd';
 import PageSearch from './pages/PageSearch';
+import PageUserProfile from './pages/PageUserProfile';
 
-const App = () =>{
-  return(
-    <div className='app-wrapper'>
-      <Header/>
-      <BrowserRouter>
+function App() {
+  return (
+    <Router>
+      <div className="app-wrapper">
+        <Header />
         <Routes>
-          <Route path="/PageSearch" element={<PageSearch/>}/>
-          <Route path="/PageAd" element={<PageAd />}/>
+          <Route path="/PageSearch" element={<PageSearch />} />
+          <Route path="/PageAd/:id" element={<PageAd />} />
+          <Route path="/PageUserProfile" element={<PageUserProfile />} />
         </Routes>
-      </BrowserRouter>
-      <Footer/>
-    </div>
-  ); 
-  }
+        <Footer />
+      </div>
+    </Router>
+  );
+}
+
 export default App;

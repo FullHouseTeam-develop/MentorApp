@@ -1,35 +1,36 @@
-import React from "react";
 
-//components
-import AdCard from "../components/AdCard";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import AdCard from '../components/AdCard';
 
-function PageAd(){
-    const [mentors, setMentors] = React.useState([]); 
-    
-  
-    React.useEffect(() =>{
-      fetch('https://655453fd63cafc694fe65629.mockapi.io/mentors')
-        .then((res)=>{
-        return res.json();
-      })
-        .then((json)=>{
-        setMentors(json);
-      });
-    },[]);
+function PageAd() {
+  const { id } = useParams();
+  const [mentor, setMentor] = useState(null);
 
-    return(
-        <div>
-            {mentors.map((obj) => ( 
-        <AdCard
-            name={obj.name}
-            bio={obj.bio}
-            helpDescription={obj.helpDescription}
-            imageUrl={obj.imageUrl}
-            price={obj.price}
-            />
-      ))}
-        </div>
-    )
+  useEffect(() => {
+    fetch(`https://655453fd63cafc694fe65629.mockapi.io/mentors/${id}`)
+      .then((res) => res.json())
+      .then((json) => setMentor(json))
+      .catch((error) => console.error('Error fetching mentor:', error));
+  }, [id]);
+
+  if (!mentor) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <div>
+      <AdCard
+        id={mentor.id}
+        name={mentor.name}
+        bio={mentor.bio}
+        helpDescription={mentor.helpDescription}
+        imageUrl={mentor.imageUrl}
+        price={mentor.price}
+        tags={mentor.tags}
+      />
+    </div>
+  );
 }
 
-export default PageAd; 
+export default PageAd;
