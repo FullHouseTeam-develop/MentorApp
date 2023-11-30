@@ -16,7 +16,10 @@ const UserProfile = (props) => {
         </div>
 
         <div className={classes.buttons}>
-          <button className={classes.edit_profile_button} onClick={toggleEdit}>
+          <button
+            className={`${classes.edit_profile_button} ${isEdit ? classes.editing : ''}`}
+            onClick={toggleEdit}
+          >
             {isEdit ? 'Завершить редактирование' : 'Редактировать профиль'}
           </button>
           <button className={classes.become_mentor_button}>Стать ментором</button>
@@ -45,7 +48,7 @@ const UserProfile = (props) => {
             />
           </div>
           <div className={classes.form_row}>
-            <label>Email:</label>
+            <label>email:</label>
             <input
               type="email"
               className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
@@ -54,7 +57,7 @@ const UserProfile = (props) => {
             />
           </div>
           <div className={classes.form_row}>
-            <label>Краткое описание:</label>
+            <label>О себе:</label>
             <textarea
               className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
               value={props.description}

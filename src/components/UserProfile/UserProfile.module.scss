@@ -35,8 +35,31 @@
     gap: 30px;
 }
 
-.become_mentor_button,
 .edit_profile_button {
+    height: auto;
+    width: 300px;
+    padding: 10px;
+    background-color: #3B96DA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: background-color 0.3s ease;
+    /* Добавлено для плавного изменения цвета */
+}
+
+.edit_profile_button.editing {
+    background-color: #DD5FAA;
+    /* Цвет кнопки при редактировании */
+}
+
+.become_mentor_button {
     height: auto;
     width: 300px;
     padding: 10px;
@@ -64,7 +87,7 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #DD5FAA  ;
+    color: #DD5FAA;
 }
 
 .form {
@@ -77,42 +100,42 @@
 }
 
 label {
-    margin-bottom: 5px;
+    color: #3B96DA;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
 }
 
 input,
 textarea {
     padding: 10px;
     width: 100%;
+    font-size: 24px;
     font-family: inherit;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
+    background-color: #70ABD6;
+    color: #FFF;
+
+    &:focus {
+        outline: none; /* Убираем обводку при фокусе */
+      }
+   
 }
 
-input:disabled {
-    pointer-events:none;
+.input:disabled {
+    pointer-events: none;
 }
 
-.input {
+.inputDisabled {
     padding: 10px;
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-
-    :disabled {
-        pointer-events:none;
-    }
+    pointer-events: none;
 }
-
-inputDisabled {
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    pointer-events:none;
-}
-
-

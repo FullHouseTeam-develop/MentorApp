@@ -28,6 +28,8 @@ function PageAd() {
         imageUrl={mentor.imageUrl}
         price={mentor.price}
         tags={mentor.tags}
+        email={mentor.email}
+        socialLink={mentor.socialLink}
       />
     </div>
   );
