@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './Header.module.scss';
-import message from '../../assets/icons/message.svg'
-import user from '../../assets/icons/user.svg'
+import userr from '../../assets/icons/userr.svg'
 import logo from '../../assets/icons/logo.svg'
 import { Link } from 'react-router-dom';
 
@@ -17,12 +16,9 @@ function Header() {
             </div>
             <div className={classes.header_icons}>
             <ul className={classes.header_icons_list}>
-                <li className={classes.message}>
-                    <img src={message} alt="mes" />
-                </li>
                 <li className={classes.user}>
                     <Link to="PageUserProfile">
-                    <img src={user} alt="user" />
+                    <img src={userr} alt="user" />
                     </Link>
                 </li>
             </ul>

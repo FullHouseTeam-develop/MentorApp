@@ -1,7 +1,29 @@
 .user_profile {
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+    flex-direction: column;
+    // margin-top: 20px;
+}
+
+
+
+.user_status {
+    color: #3B96DA;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.editingStatus {
+    margin-left: 10px; // или другое подходящее значение
+    font-weight: 300;
+    color: #DD5FAA; // или другой цвет для статуса редактирования
+}
+
+
+.tmp {
+    display: flex;
 }
 
 .user_info {
@@ -20,7 +42,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
+
+
 }
+
+
 
 .user_image img {
     max-width: 250px;
@@ -28,6 +54,8 @@
     height: 250px;
     border-radius: 10px;
 }
+
+
 
 .buttons {
     display: flex;
@@ -50,14 +78,40 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    transition: background-color 0.3s ease;
-    /* Добавлено для плавного изменения цвета */
 }
 
-.edit_profile_button.editing {
-    background-color: #DD5FAA;
-    /* Цвет кнопки при редактировании */
+
+
+.save_button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+
 }
+
+.save_button button {
+
+    height: 70px;
+    width: 220px;
+    padding: 10px;
+    background-color: #3B96DA;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+    text-align: center;
+    font-family: inherit;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: background-color 0.3s ease;
+}
+
+.save_button button:hover {
+    background-color: #DD5FAA;
+}
+
 
 .become_mentor_button {
     height: auto;
@@ -69,7 +123,7 @@
     cursor: pointer;
     color: #FFF;
     text-align: center;
-    font-family: Montserrat;
+    font-family: inherit;
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -122,9 +176,10 @@ textarea {
     color: #FFF;
 
     &:focus {
-        outline: none; /* Убираем обводку при фокусе */
-      }
-   
+        outline: none;
+        /* Убираем обводку при фокусе */
+    }
+
 }
 
 .input:disabled {

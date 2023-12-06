@@ -2,6 +2,7 @@ import React from 'react';
 import MentorCard from '../components/MainContent/MentorCard';
 import Search from '../components/Search/Search';
 
+
 function PageSearch() {
   const [mentors, setMentors] = React.useState([]);
   React.useEffect(() => {
