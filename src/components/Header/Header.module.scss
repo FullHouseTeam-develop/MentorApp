@@ -8,11 +8,18 @@
         display: flex;
         align-items: center;
         color: #DD5FAA;
+
+        .link_main {
+          text-decoration: none;
+          color: inherit;
+          cursor: pointer;
+          margin-left: 20px;
+        }
       }
 
 
       .header_link {
-        margin-left: 37px;
+        margin-left: 20px;
         width: 173px;
         height: 43px;
         border-radius: 10px;
@@ -33,8 +40,6 @@
       }
 
       .header_icons {
-        //  display: flex;
-        //  justify-content: flex-end;
 
         &_list {
           display: flex;
