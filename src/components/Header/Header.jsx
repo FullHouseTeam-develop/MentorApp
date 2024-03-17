@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Header.module.scss';
 import message from '../../assets/icons/message.svg'
 import bell from '../../assets/icons/bell.svg'
