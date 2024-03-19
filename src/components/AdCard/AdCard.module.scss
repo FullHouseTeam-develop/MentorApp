@@ -7,7 +7,6 @@
         flex-shrink: 0;
         align-items: center;
         cursor: pointer;
-        background-color: #e7f6ff;
         border: none;
         margin-top: 80px;
         margin-left: 0;
@@ -21,22 +20,22 @@
         .mentor_photo {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            width: 300px;
-            height: 300px;
-            background-color: #70ABD6;
-            border-radius: 10px;
-            box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
+            // align-items: center;
+            // text-align: center;
+            // width: 300px;
+            // height: 300px;
+            // background-color: #fff;
+            // border-radius: 10px;
+            // box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
             margin-bottom: 15px;
 
         }
 
         .mentor_photo img {
-            width: 250px;
-            height: 250px;
+            width: 300px;
+            height: 300px;
             border-radius: 10px;
-            margin-top: 25px;
+            //margin-top: 25px;
             box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
 
         }
@@ -48,11 +47,11 @@
             height: 178px;
             flex-shrink: 0;
             border-radius: 10px;
-            background: #70ABD6;
+            background: #fff;
             box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
 
             .contact_text {
-                color: #FFF;
+                color: #0066FF;
                 text-align: center;
                 font-family: Montserrat;
                 font-size: 26px;
@@ -64,7 +63,7 @@
 
             ul {
                 list-style: none;
-                color: #FFF;
+                color: #0066FF;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 600;
@@ -76,7 +75,7 @@
                 padding: 5px 15px;
                 width: auto;
                 text-align: center;
-                color: #fff;
+                color: #0066FF;
             }
         }
     }
@@ -87,14 +86,14 @@
         padding: 40px;
         flex-shrink: 0;
         border-radius: 10px;
-        background-color: #3B96DA;
+        background-color: #fff;
         box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
         margin-top: 80px;
         margin-left: 39px;
         margin-bottom: 90px;
 
         .mentor_fullname {
-            color: #FFF;
+            color: #0066FF;
             text-align: center;
             font-family: inherit;
             font-size: 40px;
@@ -108,7 +107,7 @@
             padding: 0;
             margin-left: 0;
             gap: 10px;
-            color: #FFF;
+            color: #8EB9F7;
             text-align: center;
             font-size: 25px;
             font-style: normal;
@@ -119,7 +118,7 @@
         li {
             display: inline;
             list-style: none;
-            background-color: #70ABD6;
+            background-color: #8EB9F7;
             border-radius: 50px;
             padding: 5px 10px;
             width: auto;
@@ -129,7 +128,7 @@
 
         .info {
             width: 700px;
-            color: #FFF;
+            color: #0066FF;
             font-family: Montserrat;
             font-size: 32px;
             font-style: normal;
@@ -144,7 +143,7 @@
             align-items: center;
             gap: 10px;
             border-radius: 10px;
-            background-color: #70ABD6;
+            background-color: #8EB9F7;
             color: #FFF;
             font-family: Montserrat;
             font-size: 32px;
@@ -157,7 +156,7 @@
 
     .about_me,
     .how_can_i_help {
-        color: #FFF;
+        color: #0066FF;
         font-family: Montserrat;
         font-size: 40px;
         font-weight: 600;

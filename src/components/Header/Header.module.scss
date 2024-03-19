@@ -1,10 +1,17 @@
+
+  
 .header_main{
   display: flex;
-  max-width: 1020px;
+  // max-width: 1020px;
   width: 100%;
   margin-top: 30px;
   align-items: center;
+  margin-bottom: 50px;
+  justify-content: space-between;
   
+
+  .header_one{
+    display: flex;
   .header_logo{
     max-width: 66px;
     max-height: 80px;
@@ -41,7 +48,7 @@
         background-color: #0066FF;
     }
   }
-
+  }
   .header_button_autorization{
     border: solid 3px #0066FF;
     border-radius: 10px;
@@ -82,6 +89,7 @@
     }
   }
 }
+
     
     
     
@@ -144,4 +152,4 @@
     //     }
     //   }
 
-    // }
+  // }

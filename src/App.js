@@ -13,8 +13,9 @@ function App() {
   return (
     <Router>
       <div className="app-wrapper">
-        <Header />
+        
         <main className="main-content">
+        <Header />
         <Routes>
           <Route path="/PageSearch" element={<PageSearch />} />
           <Route path="/PageAd/:id" element={<PageAd />} />

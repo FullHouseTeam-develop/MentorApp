@@ -1,6 +1,7 @@
 import React from 'react';
 import MentorCard from '../components/MainContent/MentorCard';
-import Search from '../components/Search/Search';
+import SearchBar from '../components/Search/SearchBar';
+import classes from './PageSearch.module.scss'
 
 
 function PageSearch() {
@@ -14,8 +15,8 @@ function PageSearch() {
   }, []);
 
   return (
-    <div>
-      <Search />
+    <div className={classes.main_container}>
+      <SearchBar />
       {mentors.map((obj, index) => (
         <MentorCard
           key={index}

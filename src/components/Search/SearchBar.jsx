@@ -45,33 +45,39 @@ export const SearchBar = () => {
     setSelectedTags(selectedTags.filter((selectedTag) => selectedTag !== tag));
   };
 
-  return (
-    <div className={classes.search}>
-      <div className={classes.search_icon}>
-        <img src={lupa} alt="Search" />
-       </div>
-      <input className={classes.search_input}
-        placeholder="Поиск"
-        value={input}
-        onChange={(e) => handleChange(e.target.value)}
-      />
-      <div className={classes.selectedTags}> {/* хрень сбоку */}
-      {selectedTags.map((tag, index) => (
-          <div key={index} className={classes.tag}>
-            {tag}
-            <span className={classes.closeIcon} onClick={() => removeTag(tag)}>
-              &times;
-            </span>
+    return (
+      <div className={classes.search}>
+       
+          <div className={classes.search_icon}>
+            <img src={lupa} alt="Search" />
+          </div>
+
+  
+          <input
+            className={classes.search_input}
+            placeholder="Поиск"
+            value={input}
+            onChange={(e) => handleChange(e.target.value)}
+          />
+        
+        <div className={classes.tagsContainer}> {/* Блок для тегов */}
+          {selectedTags.map((tag, index) => (
+            <div key={index} className={classes.tag}>
+              {tag}
+              <span className={classes.closeIcon} onClick={() => removeTag(tag)}>
+                &times;
+              </span>
             </div>
-            ))}
+          ))}
+        </div>
+        <div className={classes.search_result}>
+          {results && results.length > 0 && (
+            <SearchResultsList results={results} setSelectedValue={handleSearchResultSelect} />
+          )}
+        </div>
       </div>
-    <div className={classes.search_result}> {/* список имеющихся тегов */}
-    {results && results.length > 0 && <SearchResultsList results={results} setSelectedValue={handleSearchResultSelect}  />}
-      
-    </div>
-    </div>
-  );
-};
+    );
+          }
 
 
 export default SearchBar;

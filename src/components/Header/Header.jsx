@@ -1,28 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Header.module.scss';
-import logo from '../../assets/icons/Логотип.png'
+import logo from '../../assets/icons/logotype.png'
+import userr from '../../assets/icons/userr.svg'
 
 function Header() {
     return(
         <header className={classes.header_main}>
+            <div className={classes.header_one}>
             <Link to='/PageSearch'>
                 <div className={classes.header_logo}>
                     <img src={logo} alt='logo' />
                 </div>
             </Link>
+
             <Link to='/PageSearch' className={classes.header_logo_text}>
                 MentorApp
             </Link>
+
             <Link to='/PageSearch'>
                 <button className={classes.header_button_find}>Найти ментора</button>
             </Link>
+
+            </div>
+            
+            <div>
             <Link to='/AutorizationPage'>
                 <button className={classes.header_button_autorization}>Регистрация</button>
             </Link>
             <Link to='/SignInPage'>
                 <button className={classes.header_button_signin}>Войти</button>
             </Link>
+            </div>
         </header>
     )
 }

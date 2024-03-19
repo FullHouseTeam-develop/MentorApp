@@ -6,7 +6,7 @@
   padding: 32px 25px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #3B96DA;
+  background-color: #0066FF;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
   box-sizing: border-box;
@@ -18,15 +18,16 @@
     padding: 25px;
     margin-right: 60px;
     box-sizing: border-box;
-    background-color: #70ABD6;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    // background-color: #70ABD6;
+    // border-radius: 10px;
+    // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   &_image img {
-    max-width: 250px;
+    max-width: 300px;
+    max-height: 300px;
     width: 100%;
-    height: 250px;
+    height: 100%;
     border-radius: 10px;
   }
 
@@ -65,7 +66,7 @@
       li {
         display: inline;
         list-style: none;
-        background-color: #70ABD6;
+        background-color: #8EB9F7;
         border-radius: 50px;
         padding: 5px 10px;
         width: auto;
@@ -93,7 +94,7 @@
         display: flex;
         width: 200px;
         height: 50px;
-        background-color: #70ABD6;
+        background-color: #8EB9F7;
         border-radius: 10px;
         align-items: center;
         color: #FFF;
@@ -117,7 +118,7 @@
         font-weight: 600;
         line-height: normal;
         border-radius: 10px;
-        background: #DD5FAA;
+        background: #8EB9F7;
         box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.25);
 
         cursor: pointer;
