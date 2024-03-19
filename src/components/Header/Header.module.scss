@@ -1,58 +1,147 @@
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
+.header_main{
+  display: flex;
+  max-width: 1020px;
+  width: 100%;
+  margin-top: 30px;
+  align-items: center;
+  
+  .header_logo{
+    max-width: 66px;
+    max-height: 80px;
+    width: 100%;
+    height: 100%;
+  }
 
-      &_info {
-        display: flex;
-        align-items: center;
-        color: #DD5FAA;
+  .header_logo_text{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 35px;
+    text-align: center;
+    color: #0066FF;
+    margin-left: 15px;
+    text-decoration: none;
+  }
 
-        .link_main {
-          text-decoration: none;
-          color: inherit;
-          cursor: pointer;
-          margin-left: 20px;
-        }
-      }
-
-
-      .header_link {
-        margin-left: 20px;
-        width: 173px;
-        height: 43px;
-        border-radius: 10px;
-        background-color: #3B96DA;
-        color: #FFF;
-        text-align: center;
-        font-family: Montserrat;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        border: none;
-        cursor: pointer;
-
-        &:hover {
-          background-color: #0056b3;
-       }
-      }
-
-      .header_icons {
-
-        &_list {
-          display: flex;
-          list-style: none;
-        }
-
-        .message,
-        .bell,
-        .user {
-          width: 50px;
-          height: 50px;
-          margin-right: 10px;
-        }
-      }
-
+  .header_button_find{
+    border: none;
+    border-radius: 10px;
+    margin-left: 40px;
+    max-width: 200px;
+    height: 40px;
+    background-color: #8EB9F7;
+    color: #fff;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+        
+    &:hover {
+        background-color: #0066FF;
     }
+  }
+
+  .header_button_autorization{
+    border: solid 3px #0066FF;
+    border-radius: 10px;
+    max-width: 150px;
+    height: 40px;
+    background-color: transparent;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0066FF;
+    margin-left: 268px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+        
+    &:hover {
+        background-color: #0066FF;
+        color: #fff;
+    }
+  }
+
+  .header_button_signin{
+    border: none;
+    border-radius: 10px;
+    max-width: 100px;
+    height: 40px;
+    background-color: #8EB9F7;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: background-color 0.3s;
+        
+    &:hover {
+        background-color: #0066FF;
+    }
+  }
+}
+    
+    
+    
+    
+    
+    // .header {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   align-items: center;
+    //   width: 100%;
+
+    //   &_info {
+    //     display: flex;
+    //     align-items: center;
+    //     color: #DD5FAA;
+
+    //     .link_main {
+    //       text-decoration: none;
+    //       color: inherit;
+    //       cursor: pointer;
+    //       margin-left: 20px;
+    //     }
+    //   }
+
+
+    //   .header_link {
+    //     margin-left: 20px;
+    //     width: 173px;
+    //     height: 43px;
+    //     border-radius: 10px;
+    //     background-color: #3B96DA;
+    //     color: #FFF;
+    //     text-align: center;
+    //     font-family: Montserrat;
+    //     font-size: 20px;
+    //     font-style: normal;
+    //     font-weight: 500;
+    //     line-height: normal;
+    //     border: none;
+    //     cursor: pointer;
+
+    //     &:hover {
+    //       background-color: #0056b3;
+    //    }
+    //   }
+
+    //   .header_icons {
+
+    //     &_list {
+    //       display: flex;
+    //       list-style: none;
+    //     }
+
+    //     .message,
+    //     .bell,
+    //     .user {
+    //       width: 50px;
+    //       height: 50px;
+    //       margin-right: 10px;
+    //     }
+    //   }
+
+    // }
