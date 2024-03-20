@@ -7,18 +7,19 @@
 
 
 .user_status {
-    color: #3B96DA;
-    font-family: Montserrat;
+    font-weight: 600;
     font-size: 30px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: normal;
+    color: #06f;
+    font-family: Montserrat;
+    margin-bottom: 20px;
 }
 
 .editingStatus {
-    margin-left: 10px; // или другое подходящее значение
-    font-weight: 300;
-    color: #DD5FAA; // или другой цвет для статуса редактирования
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: Montserrat;
+    color: #06f;
 }
 
 
@@ -31,117 +32,93 @@
     flex-direction: column;
 }
 
-.user_image {
-    max-width: 300px;
-    height: 300px;
-    width: 300px;
-    padding: 25px;
-    margin-right: 60px;
-    box-sizing: border-box;
-    background-color: #70ABD6;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-
-
-}
-
-
+// .user_image {
+//     max-width: 250px;
+//     height: 250px;
+//     width: 250px;
+//     margin-right: 50px;
+//     border-radius: 10px;
+//     margin-bottom: 15px;
+// }
 
 .user_image img {
     max-width: 250px;
-    width: 100%;
+    width: 250px;
     height: 250px;
     border-radius: 10px;
+    margin-bottom: 15px;
+    margin-right: 50px;
 }
 
-
-
-.buttons {
+.edit_options {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-}
 
-.edit_profile_button {
-    height: auto;
-    width: 300px;
-    padding: 10px;
-    background-color: #3B96DA;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #FFF;
-    text-align: center;
-    font-family: Montserrat;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
+    .change_photo {
+        border-radius: 10px;
+        width: 250px;
+        height: 50px;
+        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.25);
+        background-color: #9ab5da;
+        border: none;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
 
-
-
-.save_button {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 40px;
-
-}
-
-.save_button button {
-
-    height: 70px;
-    width: 220px;
-    padding: 10px;
-    background-color: #3B96DA;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #FFF;
-    text-align: center;
-    font-family: inherit;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    transition: background-color 0.3s ease;
-}
-
-.save_button button:hover {
-    background-color: #DD5FAA;
+    .delete_photo {
+        border-radius: 10px;
+        width: 250px;
+        height: 50px;
+        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.25);
+        background-color: #9ab5da;
+        border: none;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
 }
 
 
-.become_mentor_button {
-    height: auto;
-    width: 300px;
-    padding: 10px;
-    background-color: #3B96DA;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #FFF;
-    text-align: center;
-    font-family: inherit;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
+
+// .buttons {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 30px;
+// }
 
 .personal_info {
     display: flex;
-    width: 100%;
+    max-width: 720px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    padding-right: 43px;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .info_heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #DD5FAA;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 26px;
+    text-align: center;
+    color: #06f;
+    margin-bottom: 20px;
 }
 
 .form {
@@ -154,25 +131,25 @@
 }
 
 label {
-    color: #3B96DA;
-    text-align: center;
+    color: #06f;
     font-family: Montserrat;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 13px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-input,
-textarea {
-    padding: 10px;
+.input_edit {
+    padding-left: 13px;
+    max-width: 660px;
+    height: 50px;
     width: 100%;
-    font-size: 24px;
-    font-family: inherit;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #70ABD6;
+    font-size: 20px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    background-color: #8EB9F7;
+    border: none;
     color: #FFF;
 
     &:focus {
@@ -186,11 +163,80 @@ textarea {
     pointer-events: none;
 }
 
-.inputDisabled {
-    padding: 10px;
+.input_non_edit {
+    padding-left: 13px;
+    max-width: 660px;
+    height: 50px;
     width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-    pointer-events: none;
+    font-size: 20px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    background-color: #8EB9F7;
+    border: none;
+    color: #FFF;
+}
+
+.edit_button{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -13px;
+
+    .edit_profile_button {
+        height: 50px;
+        width: 200px;
+        background-color: #9AB5DA;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #06f;
+        }
+    }
+}
+
+.save_button {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -13px;
+}
+
+.save_button button {
+    height: 50px;
+    width: 200px;
+    background-color: #9AB5DA;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #06f;
+    }
+}
+
+.become_mentor_button {
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    background-color: #06f;;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    &:hover {
+        background-color: #025BE0;
+    }
 }

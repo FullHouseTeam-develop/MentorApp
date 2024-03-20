@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './Header.module.scss';
 import logo from '../../assets/icons/logotype.png'
-import userr from '../../assets/icons/userr.svg'
 
 function Header() {
     return(

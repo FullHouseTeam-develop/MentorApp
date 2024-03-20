@@ -12,6 +12,7 @@
 
   .main_content{
     flex-grow: 1;
+    align-items: center;
   }
   
 }

@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import PageAd from './pages/PageAd';
 import PageSearch from './pages/PageSearch';
 import PageUserProfile from './pages/PageUserProfile';
+import PageMentorProfile from './pages/PageMentorProfile'
 import AutorizationPage from './pages/AutorizationPage';
 import SignInPage from './pages/SignInPage';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/PageSearch" element={<PageSearch />} />
           <Route path="/PageAd/:id" element={<PageAd />} />
           <Route path="/PageUserProfile" element={<PageUserProfile />} />
+          <Route path="/PageMentorProfile" element={<PageMentorProfile />} />
           <Route path="/AutorizationPage" element={<AutorizationPage />} />
           <Route path="/SignInPage" element={<SignInPage />} />
         </Routes>
