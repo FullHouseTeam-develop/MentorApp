@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import classes from './Search.module.scss';
 
 import lupa from '../../assets/icons/lupa.svg';
+import close from '../../assets/icons/close.svg';
 import SearchResultsList from './SearchResultList';
+import tagstest from '../../assets/json/tagstest.txt'
 
 export const SearchBar = () => {
   const [input, setInput] = useState('');
@@ -14,15 +16,13 @@ export const SearchBar = () => {
   const fetchData = (value) => {
     setResults([]);
 
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch(tagstest)
       .then((response) => response.json())
       .then((json) => {
-        const results = json.filter((user) => {
+        const results = json.filter((tag) => {
           return (
-            value &&
-            user &&
-            user.name &&
-            user.name.toLowerCase().includes(value)
+            tag.name &&
+            tag.name.toLowerCase().includes(value)
           );
         });
         setResults(results);
@@ -47,10 +47,12 @@ export const SearchBar = () => {
 
     return (
       <div className={classes.search}>
-       
-          <div className={classes.search_icon}>
-            <img src={lupa} alt="Search" />
-          </div>
+
+        <div className={classes.search_full}>
+
+            <div className={classes.search_icon}>
+              <img src={lupa} alt="Search" />
+            </div>
 
   
           <input
@@ -59,18 +61,20 @@ export const SearchBar = () => {
             value={input}
             onChange={(e) => handleChange(e.target.value)}
           />
+        </div>
         
         <div className={classes.tagsContainer}> {/* Блок для тегов */}
           {selectedTags.map((tag, index) => (
             <div key={index} className={classes.tag}>
               {tag}
-              <span className={classes.closeIcon} onClick={() => removeTag(tag)}>
-                &times;
+              <span className={classes.close_icon} onClick={() => removeTag(tag)}>
+                <img src={close} alt="Close" />
               </span>
             </div>
           ))}
         </div>
-        <div className={classes.search_result}>
+        
+        <div className={classes.search_result}> {/*хрень сбоку как отдельный тег */}
           {results && results.length > 0 && (
             <SearchResultsList results={results} setSelectedValue={handleSearchResultSelect} />
           )}

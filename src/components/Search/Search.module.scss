@@ -3,56 +3,71 @@
   
     display: flex;
     // width: 90%;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 50px;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
 
-    .search_input{
-      background-color: #5F9CF6;
+    .search_full{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      margin-bottom: 10px;
+      .search_icon{
+          margin-right: 10px; 
+          width: 30px;
+          height: 30px;
+        }
 
+        .search_input{
+          background-color: #5F9CF6;
+
+        }
+
+        input::placeholder{
+          font-family: Montserrat;
+          font-weight: 400;
+          font-size: 20px;
+          color: #fff;
+      }
     }
-
-    input::placeholder{
-      font-family: Montserrat;
-      font-weight: 400;
-      font-size: 20px;
-      color: #fff;
-  }
     
-    &_icon {
-        margin-right: 10px; 
-        width: 30px;
-        height: 30px;
-      }
-      .card_input {
-        width: 100%; 
-        padding: 15px; 
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        font-size: 15px;
-      }
+    
+      // .card_input {
+      //   width: 100%; 
+      //   padding: 15px; 
+      //   border: none;
+      //   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      //   border-radius: 5px;
+      //   font-size: 15px;
+      // }
 
       .tagsContainer {
     display: flex;
     flex-wrap: wrap;
+    flex-flow: row;
+
   }
 
   .tag {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     background-color: #8eb9f7;
-    border-radius: 50px;
-    padding: 5px 10px;
+    border-radius: 20px;
+    padding: 10px;
     margin: 5px;
     color: #fff;
+    font-size: 20px;
   }
 
-  .closeIcon {
-    margin-left: 5px;
+  .close_icon {
+    margin-left: 10px;
     cursor: pointer;
+
+
   }
   }
   
