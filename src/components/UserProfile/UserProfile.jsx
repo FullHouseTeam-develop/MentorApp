@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import classes from './UserProfile.module.scss';
+import { Link } from 'react-router-dom';
 
 const UserProfile = (props) => {
   const [isEdit, setIsEdit] = useState(false);
@@ -39,9 +40,7 @@ const UserProfile = (props) => {
   return (
     <div className={classes.user_profile}>
       <div className={classes.user_status}>
-        <p>
           Профиль {isEdit && <span className={classes.editingStatus}>Редактирование</span>}
-        </p>
       </div>
       <div className={classes.tmp}>
         <div className={classes.user_info}>
@@ -51,25 +50,17 @@ const UserProfile = (props) => {
             onMouseLeave={handleMouseLeave}
           >
             <img src={props.imageUrl} alt="user" />
-            {showOptions && isEdit && (
-              <div className={classes.editOptions}>
-                <button onClick={handleEditPhoto}>Редактировать</button>
-                <button onClick={handleDeletePhoto}>Удалить</button>
+            {isEdit && (
+              <div className={classes.edit_options}>
+                <button onClick={handleEditPhoto} className={classes.change_photo}>Выбрать фото</button>
+                <button onClick={handleDeletePhoto} className={classes.delete_photo}>Удалить</button>
               </div>
             )}
           </div>
 
           <div className={classes.buttons}>
             {!isEdit && (
-              <>
-                <button
-                  className={`${classes.edit_profile_button} ${isEdit ? classes.editing : ''}`}
-                  onClick={toggleEdit}
-                >
-                  Редактировать профиль
-                </button>
-                <button className={classes.become_mentor_button}>Стать ментором</button>
-              </>
+              <Link to="/PageMentorProfile"><button className={classes.become_mentor_button}>Стать ментором</button></Link>
             )}
           </div>
         </div>
@@ -79,49 +70,51 @@ const UserProfile = (props) => {
           <div className={classes.info_heading}>Личная информация</div>
           <div className={classes.form}>
             <div className={classes.form_row}>
-              <label>Имя:</label>
+              <label>Имя</label>
               <input
                 type="text"
-                className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
-                value={props.firstName}
+                className={`${!isEdit ? classes.input_non_edit : ''} ${classes.input_edit}`}
+                // value={props.firstName}
                 disabled={!isEdit}
               />
             </div>
             <div className={classes.form_row}>
-              <label>Фамилия:</label>
+              <label>Фамилия</label>
               <input
                 type="text"
-                className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
-                value={props.lastName}
+                className={`${!isEdit ? classes.input_non_edit : ''} ${classes.input_edit}`}
+                // value={props.lastName}
                 disabled={!isEdit}
               />
             </div>
             <div className={classes.form_row}>
-              <label>email:</label>
+              <label>Email</label>
               <input
                 type="email"
-                className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
-                value={props.email}
+                className={`${!isEdit ? classes.input_non_edit : ''} ${classes.input_edit}`}
+                // value={props.email}
                 disabled={!isEdit}
               />
             </div>
-            {/* <div className={classes.form_row}>
-            <label>О себе:</label>
-            <textarea
-              className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
-              value={props.description}
-              disabled={!isEdit}
-            />
-          </div> */}
             <div className={classes.form_row}>
-              <label>Ссылка на соц. сеть:</label>
+              <label>Ссылка на социальную сеть</label>
               <input
                 type="text"
-                className={`${!isEdit ? classes.inputDisabled : ''} ${classes.input}`}
-                value={props.socialLink}
+                className={`${!isEdit ? classes.input_non_edit : ''} ${classes.input_edit}`}
+                // value={props.socialLink}
                 disabled={!isEdit}
               />
             </div>
+            {!isEdit && (
+              <div className={classes.edit_button}>
+                <button
+                  className={`${classes.edit_profile_button} ${isEdit ? classes.editing : ''}`}
+                  onClick={toggleEdit}
+                >
+                  Редактировать
+                </button>
+              </div>
+            )}
             {isEdit && (
               <div className={classes.save_button}>
                 <button onClick={handleSaveChanges}>Сохранить</button>
