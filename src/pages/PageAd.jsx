@@ -1,17 +1,20 @@
-
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import AdCard from '../components/AdCard';
+import { useParams } from 'react-router-dom';
 
-function PageAd() {
+function PageSearch() {
   const { id } = useParams();
   const [mentor, setMentor] = useState(null);
 
   useEffect(() => {
+    // Запрос к эндпоинту mentors для получения данных о менторе
     fetch(`https://655453fd63cafc694fe65629.mockapi.io/mentors/${id}`)
       .then((res) => res.json())
-      .then((json) => setMentor(json))
-      .catch((error) => console.error('Error fetching mentor:', error));
+      .then((mentorData) => {
+        // Сохраняем данные о менторе
+        setMentor(mentorData);
+      })
+      .catch((error) => console.error('Error fetching mentor data:', error));
   }, [id]);
 
   if (!mentor) {
@@ -21,9 +24,9 @@ function PageAd() {
   return (
     <div>
       <AdCard
-        id={mentor.id}
-        name={mentor.name}
-        bio={mentor.bio}
+        mentor_id={mentor.mentor_id}
+        full_name={mentor.name}
+        experience={mentor.experience}
         helpDescription={mentor.helpDescription}
         imageUrl={mentor.imageUrl}
         price={mentor.price}
@@ -35,4 +38,4 @@ function PageAd() {
   );
 }
 
-export default PageAd;
+export default PageSearch;

@@ -24,7 +24,7 @@ function App() {
           <Route path="/SignInPage" element={<SignInPage />} />
         </Routes>
         </main>
-        <Footer />
+        <Footer className="footer" />
       </div>
     </Router>
   );
