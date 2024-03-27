@@ -16,26 +16,26 @@ const UserProfile = (props) => {
   };
 
   const handleEditPhoto = () => {
-    // Заглушка1
+    // Добавить логику выбора фото
     if(isEdit){
     console.log('Редактировать фото');
     }
   };
 
   const handleDeletePhoto = () => {
-    // Заглушка2
+    // Добавить логику удаления фото
     if(isEdit){
     console.log('Удалить фото');
     }
   };
 
-  const handleMouseEnter = () => {
-    setShowOptions(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setShowOptions(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setShowOptions(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setShowOptions(false);
+  // };
 
   return (
     <div className={classes.user_profile}>
@@ -46,8 +46,8 @@ const UserProfile = (props) => {
         <div className={classes.user_info}>
           <div
             className={classes.user_image}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
           >
             <img src={props.imageUrl} alt="user" />
             {isEdit && (
@@ -78,7 +78,7 @@ const UserProfile = (props) => {
                 disabled={!isEdit}
               />
             </div>
-            <div className={classes.form_row}>
+            {/* <div className={classes.form_row}>
               <label>Фамилия</label>
               <input
                 type="text"
@@ -86,7 +86,7 @@ const UserProfile = (props) => {
                 // value={props.lastName}
                 disabled={!isEdit}
               />
-            </div>
+            </div> */}
             <div className={classes.form_row}>
               <label>Email</label>
               <input

@@ -25,7 +25,7 @@ function PageSearch() {
     <div>
       <AdCard
         mentor_id={mentor.mentor_id}
-        full_name={mentor.name}
+        full_name={mentor.full_name}
         experience={mentor.experience}
         helpDescription={mentor.helpDescription}
         imageUrl={mentor.imageUrl}
