@@ -11,6 +11,10 @@ body{
   height: 100%;
 }
 
+ul {
+  padding: 0;
+}
+
 body {
   font-family: 'Montserrat';
   margin: 0;

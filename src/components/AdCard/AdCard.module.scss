@@ -43,6 +43,10 @@
         
 
         .contact_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px;
             width: 300px;
             height: 178px;
             flex-shrink: 0;

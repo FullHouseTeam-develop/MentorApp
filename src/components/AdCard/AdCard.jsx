@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './AdCard.module.scss';
 import back from '../../assets/icons/arrow-left 1.svg';
 import { Link } from 'react-router-dom';
-
+//change
 const AdCard = (props) => {
   return (
     <div className={classes.ad_card}>
@@ -26,14 +26,14 @@ const AdCard = (props) => {
         
       </div>
       <div className={classes.ad_content}>
-        <div className={classes.mentor_fullname}>{props.name}</div>
+        <div className={classes.mentor_fullname}>{props.full_name}</div>
         <ul>
-          {props.tags.map((tag, index) => (
+          {props.tags?.map((tag, index) => (
             <li key={index}>{tag}</li>
           ))}
         </ul>
         <div className={classes.about_me}>О себе </div>
-        <div className={classes.info}>{props.bio}</div>
+        <div className={classes.info}>{props.experience}</div>
         <div className={classes.how_can_i_help}>С чем могу помочь</div>
         <div className={classes.info}>{props.helpDescription}</div>
         <div className={classes.price}>{props.price}</div>
