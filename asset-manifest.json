@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/MentorApp/static/css/main.d67f780c.css",
+    "main.js": "/MentorApp/static/js/main.592f746b.js",
+    "static/js/787.2c4f6359.chunk.js": "/MentorApp/static/js/787.2c4f6359.chunk.js",
+    "static/media/Montserrat-Regular.ttf": "/MentorApp/static/media/Montserrat-Regular.24785cc015b27a3e964b.ttf",
+    "static/media/kate.jpg": "/MentorApp/static/media/kate.9d6d13ef24b792acb0c6.jpg",
+    "static/media/arrow-left 1.svg": "/MentorApp/static/media/arrow-left 1.404f685576dad01e4730253c7dfcf500.svg",
+    "static/media/background.png": "/MentorApp/static/media/background.4c1ffa8bd7278dfc1282.png",
+    "index.html": "/MentorApp/index.html",
+    "static/media/close.svg": "/MentorApp/static/media/close.7ef7b39c5f73d9c75f5a043915390057.svg",
+    "static/media/lupa.svg": "/MentorApp/static/media/lupa.302c38d2f343600bdceaa5ba472bd9f2.svg",
+    "static/media/tagstest.txt": "/MentorApp/static/media/tagstest.c974d5bcdfc46c41d6d7.txt",
+    "main.d67f780c.css.map": "/MentorApp/static/css/main.d67f780c.css.map",
+    "main.592f746b.js.map": "/MentorApp/static/js/main.592f746b.js.map",
+    "787.2c4f6359.chunk.js.map": "/MentorApp/static/js/787.2c4f6359.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d67f780c.css",
+    "static/js/main.592f746b.js"
+  ]
+}
