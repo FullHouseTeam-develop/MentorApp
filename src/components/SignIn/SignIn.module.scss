@@ -11,6 +11,7 @@
     margin-left: auto;
     margin-right: auto;
 
+
     .signin_headline{
         max-width: 300px;
         font-family: Montserrat;
@@ -25,7 +26,6 @@
         color: #fff;
         max-width: 540px;
         height: 50px;
-        width: 100%;
         padding-left: 13px;
         background-color: #8EB9F7;
         border-radius: 10px;
@@ -37,8 +37,9 @@
         border: none;
         &:focus {
             outline: none;
-            /* Убираем обводку при фокусе */
         }
+        width: calc(100% - 43px);
+        margin-right: 20px;
     }
 
     input::placeholder{
