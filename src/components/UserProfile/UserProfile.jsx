@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom';
 
 const UserProfile = (props) => {
   const [isEdit, setIsEdit] = useState(false);
+  const [isBecomeMentor, setIsBecomeMentor] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
 
   const toggleEdit = () => {
     setIsEdit((prevEdit) => !prevEdit);
+  };
+
+  const toggleBecomeMentor = () => {
+    setIsBecomeMentor((prevBecomeMentor) => !prevBecomeMentor);
   };
 
   const handleSaveChanges = () => {
@@ -40,7 +45,7 @@ const UserProfile = (props) => {
   return (
     <div className={classes.user_profile}>
       <div className={classes.user_status}>
-          Профиль {isEdit && <span className={classes.editingStatus}>Редактирование</span>}
+          Профиль {isBecomeMentor && <span className={classes.user_status}> ментора</span>} {isEdit && <span className={classes.editingStatus}>Редактирование</span>}
       </div>
       <div className={classes.tmp}>
         <div className={classes.user_info}>
@@ -60,7 +65,8 @@ const UserProfile = (props) => {
 
           <div className={classes.buttons}>
             {!isEdit && (
-              <Link to="/PageMentorProfile"><button className={classes.become_mentor_button}>Стать ментором</button></Link>
+              !isBecomeMentor && <button className={classes.become_mentor_button} onClick={toggleBecomeMentor}>Стать ментором</button> ||
+              isBecomeMentor && <button className={classes.become_mentor_button} onClick={toggleBecomeMentor}>Перестать быть ментором</button>
             )}
           </div>
         </div>
@@ -105,6 +111,64 @@ const UserProfile = (props) => {
                 disabled={!isEdit}
               />
             </div>
+            
+            {isBecomeMentor && (
+              <div className={classes.mentor_info}>
+                <div className={classes.info_heading}>Карточка ментора</div>
+                <div className={classes.form_row}>
+                  <label>Теги</label>
+                </div>
+                <div className={classes.mentor_tags}>
+                  <ul className={classes.mentor_tags_ul}>
+                      <li className={classes.mentor_tags_li}>React</li>
+                      <li className={classes.mentor_tags_li}>Python</li>
+                      {isEdit && <button className={classes.mentor_tags_button}> + Добавить</button>}
+                  </ul>
+                </div>
+  
+                {/* <div className={classes.form_row}>
+                  <label>Краткая информация</label>
+                  <textarea
+                      className={`${!isEdit ? classes.textarea_non_edit : ''} ${classes.textarea_edit}`}
+                      //value={mentorData.description}
+                      //onChange={(e) => setMentorData({ ...mentorData, description: e.target.value })}
+                      disabled={!isEdit}
+                  />
+                </div> */}
+  
+  
+                <div className={classes.form_row}>
+                  <label>О себе</label>
+                  <textarea
+                      className={`${!isEdit ? classes.textarea_non_edit : ''} ${classes.textarea_edit}`}
+                      //value={mentorData.description}
+                      //onChange={(e) => setMentorData({ ...mentorData, description: e.target.value })}
+                      disabled={!isEdit}
+                  />
+              </div>
+              <div className={classes.form_row}>
+                  <label>С чем могу помочь</label>
+                  <textarea
+                      type="text"
+                      className={`${!isEdit ? classes.textarea_non_edit : ''} ${classes.textarea_edit}`}
+                      //value={mentorData.helpDescription}
+                      //onChange={(e) => setMentorData({ ...mentorData, helpDescription: e.target.value })}
+                      disabled={!isEdit}
+                  />
+              </div>
+  
+              <div className={classes.form_row}>
+                  <label>Цена</label>
+              </div>
+              <input
+                      type="text"
+                      className={`${!isEdit ? classes.input_price_non_edit : ''} ${classes.input_price_edit}`}
+                      //value={mentorData.price}
+                      //onChange={(e) => setMentorData({ ...mentorData, price: e.target.value })}
+                      disabled={!isEdit}
+                  />
+          </div>
+            )}
             {!isEdit && (
               <div className={classes.edit_button}>
                 <button

@@ -236,7 +236,118 @@ label {
     font-weight: 500;
     font-size: 20px;
     color: #fff;
+    transition: background-color 0.3s ease;
     &:hover {
         background-color: #025BE0;
+    }
+}
+
+.mentor_info{
+
+    .mentor_tags{
+        display: flex;
+
+        .mentor_tags_ul {
+            font-weight: 500;
+            font-size: 20px;
+            color: #FFF;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .mentor_tags_li {
+            border-radius: 50px;
+            align-items: center;
+            padding: 5px 10px;
+            text-align: center;
+            max-width: 100px;
+            height: 24px;
+            display: inline-flex;
+            background-color: #8eb9f7;
+            margin-right: 5px;
+        }
+
+        .mentor_tags_button{
+            border-radius: 50px;
+            padding: 5px 10px;
+            max-width: 200px;
+            height: 34px;
+            box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.25);
+            background-color: #9ab5da;
+            border: none;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: Montserrat;
+            color: #FFF;
+            text-align: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            &:hover {
+                background-color: #06f;
+            }
+        }
+    }
+}
+
+.textarea_non_edit{
+    padding-left: 13px;
+    max-width: 660px;
+    height: 180px;
+    width: 100%;
+    font-size: 20px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    background-color: #8EB9F7;
+    border: none;
+    color: #FFF;
+}
+
+.textarea_edit{
+    padding-left: 13px;
+    max-width: 660px;
+    height: 180px;
+    width: 100%;
+    font-size: 20px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    background-color: #8EB9F7;
+    border: none;
+    color: #FFF;
+
+    &:focus {
+        outline: none;
+        /* Убираем обводку при фокусе */
+    }
+}
+
+.input_price_non_edit{
+    padding-left: 13px;
+    max-width: 150px;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    background-color: #8EB9F7;
+    border: none;
+    color: #FFF;
+}
+
+.input_price_edit{
+    padding-left: 13px;
+    max-width: 150px;
+    height: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-family: Montserrat;
+    border-radius: 10px;
+    background-color: #8EB9F7;
+    border: none;
+    color: #FFF;
+
+    &:focus {
+        outline: none;
+        /* Убираем обводку при фокусе */
     }
 }
