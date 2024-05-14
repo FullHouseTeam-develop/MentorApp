@@ -9,6 +9,7 @@ import PageUserProfile from './pages/PageUserProfile';
 import PageMentorProfile from './pages/PageMentorProfile'
 import AutorizationPage from './pages/AutorizationPage';
 import SignInPage from './pages/SignInPage';
+import MainPage from './pages/MainPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <main className="main-content">
         <Header />
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route path="/PageSearch" element={<PageSearch />} />
           <Route path="/PageAd/:id" element={<PageAd />} />
           <Route path="/PageUserProfile" element={<PageUserProfile />} />
