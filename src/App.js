@@ -19,6 +19,7 @@ function App() {
         <main className="main-content">
         <Header />
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route path="/PageSearch" element={<PageSearch />} />
           <Route path="/PageAd/:id" element={<PageAd />} />
           <Route path="/PageUserProfile" element={<PageUserProfile />} />
