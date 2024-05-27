@@ -7,13 +7,13 @@ function Header() {
     return(
         <header className={classes.header_main}>
             <div className={classes.header_one}>
-            <Link to='/PageSearch'>
+            <Link to='/'>
                 <div className={classes.header_logo}>
                     <img src={logo} alt='logo' />
                 </div>
             </Link>
 
-            <Link to='/PageSearch' className={classes.header_logo_text}>
+            <Link to='/' className={classes.header_logo_text}>
                 MentorApp
             </Link>
 

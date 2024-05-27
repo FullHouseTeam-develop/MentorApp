@@ -7,7 +7,7 @@ function Footer() {
   return(
     <footer className={classes.footer_main}>
       <div className={classes.footer_line} />
-      <Link to='/PageSearch'>
+      <Link to='/'>
         <div className={classes.footer_logo}>
           <img src={logo} alt='logo' />
         </div>
