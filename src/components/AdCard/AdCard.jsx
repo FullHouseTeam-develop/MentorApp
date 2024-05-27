@@ -1,17 +1,24 @@
 import React from 'react';
 import classes from './AdCard.module.scss';
-import back from '../../assets/icons/arrow-left 1.svg';
+import back from '../../assets/icons/Vector.svg';
 import { Link } from 'react-router-dom';
 //change
 const AdCard = (props) => {
   return (
     <div className={classes.ad_card}>
+      <div className={classes.left_part}>
+      <div className={classes.back_to}>
       <Link to="/PageSearch">
         <button className={classes.return_button}>
           <img src={back} alt="back" />
         </button>
-      </Link>
-      <div className={classes.left_part}>
+        </Link>
+        <Link to="/PageSearch" style={{ textDecoration: 'none' }}>
+        <div className={classes.back_text} >К списку менторов</div>
+        </Link>
+      </div>
+
+      
         <div className={classes.mentor_photo}>
           <img src={props.imageUrl} alt="mentor_photo" />
         </div>

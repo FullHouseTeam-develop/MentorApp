@@ -1,19 +1,38 @@
 .ad_card {
     display: flex;
-
-    .return_button {
-        width: 50px;
-        height: 50px;
-        flex-shrink: 0;
-        align-items: center;
-        cursor: pointer;
-        border: none;
-        margin-top: 80px;
-        margin-left: 0;
-    }
-
-
     .left_part {
+        .back_to{
+            display: flex;
+            // margin-top: 30px;
+            align-items: center;
+            
+            
+            .return_button {
+                min-width: 50px;
+                min-height: 50px;
+                background-color: #ffffff00;
+                // flex-shrink: 0;
+                cursor: pointer;
+                border: none;
+                margin-left: 0;
+                position: relative;
+                top: 3px;
+                left: 5px;
+            }
+
+            .back_text{
+                font-family: Montserrat;
+                font-weight: 600;
+                font-size: 16px;
+                color: #06f;
+                
+                cursor: pointer;
+            }
+        }
+    
+
+
+    
         margin-top: 80px;
         margin-left: 50px;
 
